@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,56 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Week_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Are Awesome!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="crE-hZ-xNR">
+                                <rect key="frame" x="16" y="44" width="343" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="HRQ-bb-f0J"/>
+                                    <constraint firstAttribute="height" constant="120" id="PaO-kD-5Nw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="36"/>
+                                <color key="textColor" red="0.4962732195854187" green="0.11885721236467361" blue="0.082318760454654694" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAP-Hp-KR8">
+                                <rect key="frame" x="156.66666666666666" y="219" width="62" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="4D0-TN-VlU"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Tzv-N9-VbD"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="62" id="Ysq-Vv-Qjh"/>
+                                    <constraint firstAttribute="height" constant="30" id="jIh-0f-q3s"/>
+                                </constraints>
+                                <state key="normal" title="Say it!"/>
+                                <connections>
+                                    <action selector="sayitButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GBn-tj-u6z"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="crE-hZ-xNR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="AGV-yI-s4b"/>
+                            <constraint firstItem="HAP-Hp-KR8" firstAttribute="top" secondItem="crE-hZ-xNR" secondAttribute="bottom" constant="55" id="JZR-Gq-Nav"/>
+                            <constraint firstItem="crE-hZ-xNR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Kh1-WG-2sa"/>
+                            <constraint firstItem="crE-hZ-xNR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="RT1-mZ-J66"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="crE-hZ-xNR" secondAttribute="trailing" constant="16" id="e54-za-Dq2"/>
+                            <constraint firstItem="HAP-Hp-KR8" firstAttribute="top" secondItem="crE-hZ-xNR" secondAttribute="bottom" constant="55" id="gyM-d1-aV0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="crE-hZ-xNR" secondAttribute="trailing" constant="16" id="lfP-xq-qzz"/>
+                            <constraint firstItem="crE-hZ-xNR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="peJ-Yk-jt7"/>
+                            <constraint firstItem="HAP-Hp-KR8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vWv-Yo-cmY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="crE-hZ-xNR" id="Eq6-cA-8n2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="64.799999999999997" y="71.674876847290648"/>
         </scene>
     </scenes>
 </document>

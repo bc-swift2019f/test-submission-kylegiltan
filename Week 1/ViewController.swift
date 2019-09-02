@@ -22,7 +22,6 @@ class ViewController: UIViewController {
         print("👍 You clicked the say it button")
         messageLabel.text = "Fabulous? That's you!"
         //making some change
-        //idk
     }
     
 }
